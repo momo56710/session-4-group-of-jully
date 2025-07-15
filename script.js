@@ -1,0 +1,16 @@
+const name = "mohamed";
+let age = 22;
+const isStudent = false;
+let olderThan21 = age > 21;
+let youngerThan18 = age < 18;
+const isStudentOrTeacher = isStudent || true;
+const isStudentAndTeacher = isStudent && true;
+console.log("Hello, World!");
+console.log("name: " + name);
+console.log("age: " + age++);
+console.log("isStudent: " + isStudent);
+console.log("older than 21: " + olderThan21);
+console.log("younger than 18: " + youngerThan18);
+console.log("student or teacher: " + isStudentOrTeacher);
+console.log("student and teacher: " + isStudentAndTeacher);
+console.log("my age next year: " + age);
