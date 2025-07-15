@@ -1,6 +1,6 @@
 const apple = ["apple", "banana", "orange", true];
 let fruits = ["banana", "orange", 20];
-let name = "mohamed";
+let name = "mohame";
 let size = window.screen.width;
 
 console.log(apple); // ["apple", "banana", "orange"]
