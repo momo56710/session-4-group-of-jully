@@ -4,11 +4,7 @@ let students = [
     age: 45,
     isPresent: false,
   },
-  {
-    name: "hmida",
-    age: 18,
-    isPresent: true,
-  },
+
   {
     name: "mohamed",
     age: 30,
