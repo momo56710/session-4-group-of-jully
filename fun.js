@@ -1,31 +1,60 @@
 // ===============================
 // FUNCTION DECLARATION
 // ===============================
-
+const grreting = greet("moha");
 // Traditional function declaration - hoisted
 function greet(name) {
   return `Hello, ${name}!`;
 }
-
+console.log(grreting);
+console.log(greet());
 // Function declaration with default parameter
-function multiply(a = 1, b = 1) {
+function multiply(a = 1, b = 5) {
   return a * b;
 }
-
-// Function declaration using rest parameters
-function sumAll(...nums) {
-  return nums.reduce((total, n) => total + n, 0);
+function createAccount(name, email, verfied = false) {
+  return `account created ${name} ${email} ${verfied}`;
 }
+
+console.log(createAccount("mohamed", "mha@moha"));
+console.log(createAccount("mohamed", "mha@moha", true));
+console.log(multiply());
+// Function declaration using rest parameters
+function sumAll(prof, ...mods) {
+  let total = 0;
+  let cofs = 0;
+  mods.forEach((mod) => {
+    total += mod.note * mod.cof;
+    cofs += mod.cof;
+  });
+
+  return `${prof} mdalk ${total / cofs}`;
+}
+console.log(sumAll("hamid", { note: 15, cof: 2 }, { note: 3, cof: 6 }));
+console.log(
+  sumAll(
+    { note: 15, cof: 2 },
+    { note: 3, cof: 6 },
+    { note: 3, cof: 6 },
+    { note: 3, cof: 6 },
+    { note: 3, cof: 6 }
+  )
+);
 
 // ===============================
 // FUNCTION EXPRESSION
 // ===============================
 
 // Anonymous function expression assigned to a variable
-const greetExpr = function (name) {
+function greetDec(name) {
+  return `Hi, ${name}!`;
+}
+const greetExp = function (name) {
   return `Hi, ${name}!`;
 };
-
+const greetArrw = (name) => {
+  return `Hi, ${name}!`;
+};
 // Named function expression (name is optional but can help with debugging)
 const greetExprNamed = function greetInternal(name) {
   return `Hello from named function: ${name}`;
